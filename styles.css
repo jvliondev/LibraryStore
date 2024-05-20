@@ -1,0 +1,238 @@
+body {
+    background-color: rgb(40, 41, 40);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerContainer {
+    display: flex;
+    width: 100vw;
+    align-items: start;
+    justify-content: start;
+}
+.createYourOwnLibrary {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 40px;
+    color: rgba(248, 247, 245, 0.938);
+    font-family: "Spectral SC", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.library {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    
+    justify-content: center;
+    align-items: start;
+    width: 800px;
+    height: auto;
+    border-radius: 20px;
+    border: 8px solid rgb(248, 248, 248);
+    background-color: rgb(53, 52, 49);
+}
+.addABook {
+    margin-bottom: 20px;
+}
+.libraryCard {
+    position: relative; /* Ensure proper positioning */
+    width: 150px;
+    height: 200px;
+    perspective: 1000px; /* Add perspective for 3D effect */
+    margin: auto;
+    background-color: rgb(82, 82, 74);
+}
+.cardInner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+.libraryCard.flipped .cardInner {
+    transform: rotateY(180deg);
+}
+.cardFront,
+.cardBack {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+.cardFront {
+    /* Front of the card styling */
+    background-size: cover;
+}
+.cardBack {
+    /* Back of the card styling */
+    transform: rotateY(180deg); /* Initially hidden */
+    background-color: rgb(82, 82, 74);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+::backdrop {
+    background-image: linear-gradient(45deg, rgba(206, 216, 208, 0.726), rgb(136, 146, 133), rgb(127, 134, 141), rgb(152, 167, 155));
+    opacity: 0.75;
+}
+#dialog {
+    border-radius: 20px;
+    border: 4px dotted rgb(247, 34, 87);
+    height: 500px;
+    width: 600px;
+    align-content: center;
+    justify-content: center;
+    background-color: rgb(43, 42, 42);
+    font-family: "Spectral SC", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+}
+#bookFormContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#bookForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    height: 300px;
+    width: 600px;
+}
+.inputContainers {
+    padding: 10px;
+}
+input {
+    height: 30px;
+    width: 300px;
+    font-size: 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(255, 0, 119);
+}
+form label {
+    font-size: 20px;
+    padding-right: 10px;
+}
+.alignBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+    margin-top: 20px;
+}
+button {
+    padding: 2px;
+    margin: 10px;
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(243, 45, 78);
+    color: white;
+    font-weight: bold;
+    font-family: "Spectral SC", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+button:hover {
+    background-color: pink;
+}
+
+#radioRead {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
+}
+#radioRead input {
+    width: 30px;
+}
+
+.libraryCard {
+  position: relative;
+  width: 150px;
+  height: 200px;
+  perspective: 1000px;
+  margin: auto;
+  background-image: url('plusIcon.png');
+  background-size: 60px 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
+.cardInner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.libraryCard.flipped .cardInner {
+  transform: rotateY(180deg);
+}
+
+.cardFront,
+.cardBack {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.cardFront {
+  background-size: cover;
+}
+
+.cardBack {
+  transform: rotateY(180deg);
+  background-color: rgb(82, 82, 74);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bookContent {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  width: 100px;
+  margin: auto;
+  text-align: center;
+  white-space: pre-wrap; /* Preserve new lines and white spaces */
+}
+
+.removeButton {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 20px;
+  height: 20px;
+ font-size: 15px;
+  /* background-color: rgb(243, 45, 78); */
+
+  color: white;
+  border: none;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  font-family: "Spectral SC", serif;
+  cursor: pointer;
+  z-index: 10;
+}
+.removeButton:hover {
+    background-color: pink;
+}
+.form-switch {
+    position: absolute;
+    bottom: 5px;
+    right: -5px;
+
+}

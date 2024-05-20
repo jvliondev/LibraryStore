@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Library</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="headerContainer">
+        <header>
+            <h1 class="createYourOwnLibrary">Create Your Own Library</h1>
+                
+        </header>
+    </div>
+        <dialog id="dialog">
+            <div id="bookFormContainer">
+                <form id="bookForm">
+                    <div class="inputContainers">
+                        <label for="picLink">Url Book Picture:</label>
+                    <input type="text" id="picLink" name="picLink">
+                    </div>
+                    <div class="inputContainers">
+                        <label for="Title">Title:</label>
+                        <input type="text" id="Title" name="Title">
+                    </div>
+                    <div class="inputContainers">
+                        <label for="Author">Author:</label>
+                        <input type="text" id="Author" name="Author">
+                    </div>
+                    <div class="inputContainers">
+                        <label for="Pages">Pages:</label>
+                        <input type="text" id="Pages" name="Pages">
+                    </div>
+                    <div class="inputContainers" id="radioRead">
+                        <label for="Read">Read:</label>
+                        <div id="yesNo">
+                            <label for="yes">yes</label>
+                            <input type="radio" id="yes" name="read" value="true">
+                            <label for="no">No</label>
+                            <input type="radio" id="no" name="read" value="false">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="alignBtn">
+            <button value="cancel" formmethod="dialog" class="close" autofocus>Close</button>
+            <button  id="confirmBtn" value="default">Confirm</button>
+            </div>
+        </dialog>
+      <button class="show">ADD A BOOK</button>
+    <section class="library">
+        <div class="libraryCard flipped">
+            <div class="cardInner" id="card1">
+                <div class="cardFront">
+                   <div class="imageLinkToBook"></div> 
+                </div>
+                <div class="cardBack">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+</body>
+</html>
